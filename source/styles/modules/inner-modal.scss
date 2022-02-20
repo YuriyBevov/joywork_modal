@@ -1,0 +1,89 @@
+.inner-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    min-height: 100%;
+    width: 100%;
+    background-color: transparent;
+
+    z-index: 110;
+    overflow: hidden; 
+    overflow-y: auto;
+
+    &.is-opened {
+        display: block;
+    }
+
+    &__container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
+        max-width: 680px;
+        height: fit-content;
+        min-height: 100%;
+        padding: 30px;
+        background-color: $white;
+        box-shadow: -3px 0px 24px rgba(0, 0, 0, 0.25);
+        transform: translateX(100%);
+
+        animation: showInnerModal 0.7s forwards;
+
+        @media(max-width: $tablet_small) {
+            padding: 10px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: background-color $main-transition;
+
+        &:hover,
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__title {
+        font-family: $f1_reg;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 1.2;
+        padding-right: 50px;
+        align-self: center;
+
+        color: $black;
+
+        @media(max-width: $tablet_large) {
+            font-size: 22px;
+        }
+
+        @media(max-width: $mobile_large) {
+            font-size: 18px;
+        }
+    }
+
+    @keyframes showInnerModal {
+        0% {
+            transform: translateX(100%);
+        }
+      
+        100% {
+            transform: translateX(0);
+        }
+      }
+}

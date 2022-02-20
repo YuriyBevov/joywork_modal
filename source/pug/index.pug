@@ -1,0 +1,14 @@
+extends layouts/main-layout.pug
+
+block variables
+  -
+    const title = "Joywork Analitics Modal"
+    const desc = "Модальное окно аналитики"
+    const keywords = ""
+
+block content
+  button(type="button" data-modal="analitics-modal").modal-opener Кнопка показа модалки
+
+block modals
+  include ./modals/analitics-modal
+  

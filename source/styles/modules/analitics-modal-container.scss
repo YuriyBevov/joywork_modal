@@ -1,0 +1,7 @@
+.analitics-modal-container {
+    display: none;
+
+    &.is-opened {
+        display: flex;
+    }
+}

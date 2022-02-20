@@ -1,0 +1,14 @@
+@mixin fadeInAnimation() {
+    animation: fadeIn 0.7s forwards;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 100%;
+        }
+    }
+}
+

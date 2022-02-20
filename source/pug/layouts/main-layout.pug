@@ -1,0 +1,23 @@
+include ./head
+
+doctype html
+
+block variables
+  -
+    const title = ""
+    const desc = ""
+    const keywords = ""
+
+html(lang="ru")
+  +head(title, desc, keywords)
+
+  div(style="display:none")
+    include ../../assets/img/svg-sprite.svg 
+
+  main
+    block content
+
+  block modals
+
+  block scripts
+    script(src="./js/bundle.js")
