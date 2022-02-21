@@ -10,8 +10,6 @@ let togglers = document.querySelectorAll('.tab__controls-toggler');
 let innerModals = document.querySelectorAll('.inner-modal');
 
 function refreshModalState(refreshTabs = false, refreshViews = true, refreshFilterDrop = true) {
-    console.log('refresh');
-
     if(innerModals) {
         innerModals.forEach(modal => {
             modal.classList.contains('is-opened') ?

@@ -7,6 +7,30 @@
         flex-grow: 1;
         border: $light-border;
     }
+    
+    .swiper {
+        @media(max-width: 960px) {
+            position: absolute;
+            height: 200px;
+            top: 122px;
+        }
+
+        @media(max-width: 768px) {
+            position: relative;
+            top: 0;
+            height: 400px;
+            width: calc(100vw - 48px);
+            margin-right: 0;
+        }
+
+        @media(max-width: 600px) {
+            height: 300px;
+        }
+
+        @media(max-width: 500px) {
+            height: 240px;
+        }
+    }
 }
 
 #yandex-map {

@@ -13,6 +13,11 @@ if(btns) {
 
         !modal.classList.contains('is-opened') ?
         modal.classList.add('is-opened') : null;
+        let modalContainer = modal.querySelector('.modal__container');
+
+        modalContainer.scrollTo({
+            top: 0
+        });
     };
 
     btns.forEach(btn => {

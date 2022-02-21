@@ -9,6 +9,7 @@ if(modal) {
     const onClickByOverlayCloseModal = (evt) => {
         if(evt.target === modal) {
             modal.classList.remove('is-opened');
+            
             refreshModalState(true);
         }
     }

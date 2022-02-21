@@ -14839,7 +14839,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_filter_openFilter_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_openFilter_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _modules_modalToggler_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/modalToggler.js */ "./source/scripts/modules/modalToggler.js");
 /* harmony import */ var _modules_modalToggler_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_modalToggler_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_range_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/range.js */ "./source/scripts/modules/range.js");
+/* harmony import */ var _modules_range_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/range.js */ "./source/scripts/modules/range.js");
 
 
 
@@ -14981,6 +14981,7 @@ if(modal) {
     const onClickByOverlayCloseModal = (evt) => {
         if(evt.target === modal) {
             modal.classList.remove('is-opened');
+            
             Object(_refreshModalState_js__WEBPACK_IMPORTED_MODULE_0__["refreshModalState"])(true);
         }
     }
@@ -15075,6 +15076,11 @@ if(btns) {
 
         !modal.classList.contains('is-opened') ?
         modal.classList.add('is-opened') : null;
+        let modalContainer = modal.querySelector('.modal__container');
+
+        modalContainer.scrollTo({
+            top: 0
+        });
     };
 
     btns.forEach(btn => {
@@ -15107,8 +15113,6 @@ let togglers = document.querySelectorAll('.tab__controls-toggler');
 let innerModals = document.querySelectorAll('.inner-modal');
 
 function refreshModalState(refreshTabs = false, refreshViews = true, refreshFilterDrop = true) {
-    console.log('refresh');
-
     if(innerModals) {
         innerModals.forEach(modal => {
             modal.classList.contains('is-opened') ?
