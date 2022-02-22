@@ -1,7 +1,7 @@
 import { refreshModalState } from './refreshModalState.js';
 
 const modal = document.querySelector('.modal');
-const closeBtn = document.querySelector('.modal__close');
+const closeBtns = document.querySelectorAll('.modal__close');
 
 const ESC_BTN_CODE = 27;
 
@@ -34,5 +34,7 @@ if(modal) {
 
     window.addEventListener('keydown', onEscBtnCloseModal);
     modal.addEventListener('click', onClickByOverlayCloseModal);
-    closeBtn.addEventListener('click', onClickCloseModal);
+    closeBtns.forEach(closeBtn => {
+        closeBtn.addEventListener('click', onClickCloseModal);
+    })
 }

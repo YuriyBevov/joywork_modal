@@ -1,8 +1,6 @@
 let togglers = document.querySelectorAll('.tab__controls-toggler');
 let views = document.querySelectorAll('.modal__body');
 
-console.log(togglers);
-
 const onClickChangeModalView = (evt) => {
     togglers.forEach(toggler => {
         toggler.classList.contains('is-active') ?
@@ -10,7 +8,11 @@ const onClickChangeModalView = (evt) => {
     })
 
     let viewType = evt.target.getAttribute('data-view-type');
-    evt.target.classList.add('is-active');
+    let activeTogglers = document.querySelectorAll('.tab__controls-toggler[data-view-type="' + viewType + '"]')
+
+    activeTogglers.forEach(toggler => {
+        toggler.classList.add('is-active');
+    })
 
     views.forEach(view => {
         view.classList.contains('is-active') ?

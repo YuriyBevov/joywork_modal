@@ -48,7 +48,7 @@
     
         .col-6 {
             width: 50%;
-            padding-right: 10px;
+            padding-right: 5px;
         }
 
         @media(max-width: 960px) {
@@ -102,28 +102,11 @@
             color: #E3594E;
         }
 
-        @media(max-width: 768px) {
-            order: 2;
-
+        @media(max-width: 960px) {
+            
+            margin-bottom: 5px;
             &.col-6 {
                 width: 100%;
-            }
-        }
-
-        @media(max-width: 600px) {
-            &.col-6 {
-                width: 50%;
-                display: flex;
-                justify-content: flex-end;
-                padding-right: 10px;
-                align-items: baseline;
-            }
-        }
-
-        @media(max-width: 400px) {
-            &.col-6 {
-                width: 100%;
-                display: block;
             }
         }
     }
@@ -136,48 +119,51 @@
 
     &__action {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
 
-        @media(max-width: 768px) {
-            &.col-6 {
-                width: 100%;
-            }
-        }
-
-        @media(max-width: 600px) {
-            &.col-6 {
-                width: 50%;
-                
-            }
-        }
-
-        @media(max-width: 400px) {
+        @media(max-width: 960px) {
             &.col-6 {
                 width: 100%;
             }
         }
 
         &-link {
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
-            width: 28px;
+            width: fit-content;
+            min-width: 28px;
             height: 24px;
             padding: 5px;
             background: linear-gradient(180deg, #FEFEFE 0%, #F6F6F6 100%);
             border: 1px solid #CDCED0;
             border-radius: 3px;
-            margin-left: 5px;
-
-            @media(max-width: 768px) {
-                margin-left: 0;
-                margin-right: 5px;
-                margin-bottom: 15px;
-            }
+            margin-left: 3px;
 
             &--red {
                 background: linear-gradient(180deg, #E7766D 0%, #E3594E 100%);
                 border: 1px solid #C34B3F;
+            }
+
+            &--blue {
+                background: linear-gradient(180deg, #718CAC 0%, #506F94 100%);
+                border: 1px solid #507299;
+            }
+
+            @media(max-width: 960px) {
+                margin: 3px;
+                margin-left: 0;
+
+                &.desktop-hidden {
+                    display: flex;
+                }
+            }  
+
+            @media(min-width: 960px) {
+                &.mobile-hidden {
+                    display: flex;
+                }
             }
         }
     }

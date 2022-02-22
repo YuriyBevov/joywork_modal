@@ -101,7 +101,7 @@
 <path d="M4.23014 0.0656349C4.31491 -0.0218651 4.45436 -0.0218651 4.54186 0.0629006L7.00005 2.49923L9.44731 0.0765727C9.53481 -0.00819297 9.67426 -0.00819296 9.75903 0.0793071C9.84379 0.166807 9.84379 0.30626 9.7563 0.391026L7.15318 2.96954C7.06841 3.05431 6.92896 3.05431 6.84419 2.96954L4.23014 0.380088C4.14537 0.289854 4.14264 0.153135 4.23014 0.0656349V0.0656349Z" fill="#C34B3F"></path>
 </g>
 
-</symbol><symbol id="icon-time" viewBox="0 0 14 14">
+</symbol><symbol id="icon-price" viewBox="0 0 24 24"><g><rect fill="none" height="24" width="24"></rect></g><g><path d="M13.5,3H7v9H5v2h2v2H5v2h2v3h2v-3h4v-2H9v-2h4.5c3.04,0,5.5-2.46,5.5-5.5C19,5.46,16.54,3,13.5,3z M13.5,12H9V5h4.5 C15.43,5,17,6.57,17,8.5S15.43,12,13.5,12z"></path></g></symbol><symbol id="icon-time" viewBox="0 0 14 14">
 <path d="M6.99968 0.583344C5.73058 0.583344 4.48998 0.959675 3.43477 1.66475C2.37955 2.36982 1.55711 3.37197 1.07145 4.54446C0.585788 5.71696 0.458717 7.00714 0.706305 8.25185C0.953894 9.49656 1.56502 10.6399 2.46241 11.5373C3.3598 12.4347 4.50314 13.0458 5.74785 13.2934C6.99256 13.541 8.28274 13.4139 9.45523 12.9283C10.6277 12.4426 11.6299 11.6201 12.3349 10.5649C13.04 9.50972 13.4163 8.26912 13.4163 7.00002C13.4143 5.29883 12.7377 3.66789 11.5347 2.46496C10.3318 1.26204 8.70087 0.58535 6.99968 0.583344V0.583344ZM6.99968 12.25C5.96132 12.25 4.94629 11.9421 4.08293 11.3652C3.21957 10.7884 2.54667 9.96842 2.14931 9.00911C1.75195 8.0498 1.64798 6.99419 1.85055 5.97579C2.05313 4.95739 2.55314 4.02193 3.28737 3.2877C4.02159 2.55348 4.95705 2.05346 5.97545 1.85089C6.99385 1.64832 8.04945 1.75228 9.00876 2.14964C9.96808 2.54701 10.788 3.21991 11.3649 4.08327C11.9418 4.94663 12.2497 5.96167 12.2497 7.00002C12.248 8.39189 11.6943 9.72626 10.7101 10.7105C9.72591 11.6947 8.39154 12.2483 6.99968 12.25V12.25Z" fill="#757575"></path>
 <path d="M7.58367 6.75849V3.49999C7.58367 3.34528 7.52221 3.19691 7.41281 3.08751C7.30341 2.97811 7.15504 2.91666 7.00033 2.91666C6.84562 2.91666 6.69724 2.97811 6.58785 3.08751C6.47845 3.19691 6.41699 3.34528 6.41699 3.49999V6.99999C6.41703 7.15468 6.47851 7.30303 6.58791 7.4124L8.33792 9.1624C8.44794 9.26866 8.59529 9.32745 8.74824 9.32613C8.90119 9.3248 9.0475 9.26345 9.15565 9.15529C9.26381 9.04714 9.32516 8.90083 9.32649 8.74788C9.32781 8.59494 9.26902 8.44758 9.16276 8.33757L7.58367 6.75849Z" fill="#757575"></path>
 </symbol><symbol id="icon-up" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></symbol><symbol id="icon-view" viewBox="0 0 18 18">
@@ -195,8 +195,8 @@
             <div class="tab__controls-bottom">
               <button class="tab__controls-average-btn btn-default inner-modal-opener" type="button" data-modal-name="average-modal">
                 <svg width="18" height="18">
-                  <use xlink:href="#icon-chart"></use><span>Показать средние цены</span>
-                </svg>
+                  <use xlink:href="#icon-chart"></use>
+                </svg><span>Показать средние цены</span>
               </button>
             </div>
           </div>
@@ -324,19 +324,31 @@
                           <use xlink:href="#icon-price-down"></use>
                         </svg>
                       </div>
-                      <div class="object-short-card__action col-6"><a class="object-short-card__action-link" href="#">
+                      <div class="object-short-card__action col-6"><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--red" href="#" aria-label="Скачать pdf">
+                          <svg width="22" height="16">
+                            <use xlink:href="#icon-pdf_2"></use>
+                          </svg></a><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--blue" href="#" aria-label="Перейти во вконтакте">
+                          <svg width="20" height="16">
+                            <use xlink:href="#icon-vk"></use>
+                          </svg></a><a class="desktop-hidden object-short-card__action-link" href="#" aria-label="Скачать">
+                          <svg width="16" height="16">
+                            <use xlink:href="#icon-download"></use>
+                          </svg></a><a class="object-short-card__action-link desktop-hidden" href="#">Задачи</a><a class="object-short-card__action-link desktop-hidden" href="#">Автопоиск</a><a class="object-short-card__action-link desktop-hidden" href="#">
+                          <svg width="16" height="16">
+                            <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
+                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-add" aria-label="Добавить"></use>
-                          </svg></a><a class="object-short-card__action-link" href="#">
+                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
-                          </svg></a><a class="object-short-card__action-link" href="#">
+                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-time" aria-label="..."></use>
-                          </svg></a><a class="object-short-card__action-link object-short-card__action-link--red" href="#">
+                          </svg></a><a class="mobile-hidden object-short-card__action-link object-short-card__action-link--red" href="#">
                           <svg width="20" height="8">
                             <use xlink:href="#icon-pdf_2" aria-label="Скачать pdf"></use>
-                          </svg></a><a class="object-short-card__action-link" href="#">
+                          </svg></a><a class="mobile-hidden object-short-card__action-link" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-eye" aria-label="Подробнее"></use>
                           </svg></a></div>
@@ -374,19 +386,31 @@
                           <use xlink:href="#icon-price-down"></use>
                         </svg>
                       </div>
-                      <div class="object-short-card__action col-6"><a class="object-short-card__action-link" href="#">
+                      <div class="object-short-card__action col-6"><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--red" href="#" aria-label="Скачать pdf">
+                          <svg width="22" height="16">
+                            <use xlink:href="#icon-pdf_2"></use>
+                          </svg></a><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--blue" href="#" aria-label="Перейти во вконтакте">
+                          <svg width="20" height="16">
+                            <use xlink:href="#icon-vk"></use>
+                          </svg></a><a class="desktop-hidden object-short-card__action-link" href="#" aria-label="Скачать">
+                          <svg width="16" height="16">
+                            <use xlink:href="#icon-download"></use>
+                          </svg></a><a class="object-short-card__action-link desktop-hidden" href="#">Задачи</a><a class="object-short-card__action-link desktop-hidden" href="#">Автопоиск</a><a class="object-short-card__action-link desktop-hidden" href="#">
+                          <svg width="16" height="16">
+                            <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
+                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-add" aria-label="Добавить"></use>
-                          </svg></a><a class="object-short-card__action-link" href="#">
+                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
-                          </svg></a><a class="object-short-card__action-link" href="#">
+                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-time" aria-label="..."></use>
-                          </svg></a><a class="object-short-card__action-link object-short-card__action-link--red" href="#">
+                          </svg></a><a class="mobile-hidden object-short-card__action-link object-short-card__action-link--red" href="#">
                           <svg width="20" height="8">
                             <use xlink:href="#icon-pdf_2" aria-label="Скачать pdf"></use>
-                          </svg></a><a class="object-short-card__action-link" href="#">
+                          </svg></a><a class="mobile-hidden object-short-card__action-link" href="#">
                           <svg width="14" height="14">
                             <use xlink:href="#icon-eye" aria-label="Подробнее"></use>
                           </svg></a></div>
@@ -462,6 +486,27 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="modal__footer">
+        <div class="modal__footer-togglers">
+          <button class="tab__controls-toggler btn-default is-active" type="button" data-view-type="list">Списком</button>
+          <button class="tab__controls-toggler btn-default" type="button" data-view-type="map">На карте</button>
+        </div>
+        <button class="price-btn btn-default inner-modal-opener" type="button" data-modal-name="average-modal">
+          <svg width="18" height="18">
+            <use xlink:href="#icon-price"></use>
+          </svg>
+        </button>
+        <button class="btn-default up-btn" type="button">
+          <svg width="18" height="18">
+            <use xlink:href="#icon-up"></use>
+          </svg>
+        </button>
+        <button class="modal__close btn-default" type="button">
+          <svg width="18" height="18">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>

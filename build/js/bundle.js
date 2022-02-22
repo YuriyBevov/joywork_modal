@@ -14853,6 +14853,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+let footer = document.querySelector('.modal__footer');
+let upBtn = document.querySelector('.up-btn');
+let modal = document.querySelector('.modal__container');
+
+upBtn.addEventListener('click', function() {
+    console.log('scroll')
+    modal.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
+let header = document.querySelector('.modal__header');
+
+let observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if(entry.isIntersecting) {
+            footer.classList.contains('is-active') ?
+            footer.classList.remove('is-active') : null
+        } else {
+            footer.classList.add('is-active');
+        }
+    });
+});
+
+observer.observe(header);
+
 
 /***/ }),
 
@@ -14895,8 +14922,6 @@ if(btn) {
 let togglers = document.querySelectorAll('.tab__controls-toggler');
 let views = document.querySelectorAll('.modal__body');
 
-console.log(togglers);
-
 const onClickChangeModalView = (evt) => {
     togglers.forEach(toggler => {
         toggler.classList.contains('is-active') ?
@@ -14904,7 +14929,11 @@ const onClickChangeModalView = (evt) => {
     })
 
     let viewType = evt.target.getAttribute('data-view-type');
-    evt.target.classList.add('is-active');
+    let activeTogglers = document.querySelectorAll('.tab__controls-toggler[data-view-type="' + viewType + '"]')
+
+    activeTogglers.forEach(toggler => {
+        toggler.classList.add('is-active');
+    })
 
     views.forEach(view => {
         view.classList.contains('is-active') ?
@@ -14973,7 +15002,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const modal = document.querySelector('.modal');
-const closeBtn = document.querySelector('.modal__close');
+const closeBtns = document.querySelectorAll('.modal__close');
 
 const ESC_BTN_CODE = 27;
 
@@ -15006,7 +15035,9 @@ if(modal) {
 
     window.addEventListener('keydown', onEscBtnCloseModal);
     modal.addEventListener('click', onClickByOverlayCloseModal);
-    closeBtn.addEventListener('click', onClickCloseModal);
+    closeBtns.forEach(closeBtn => {
+        closeBtn.addEventListener('click', onClickCloseModal);
+    })
 }
 
 /***/ }),
