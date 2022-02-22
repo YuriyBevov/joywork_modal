@@ -14840,6 +14840,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modalToggler_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/modalToggler.js */ "./source/scripts/modules/modalToggler.js");
 /* harmony import */ var _modules_modalToggler_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_modalToggler_js__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _modules_range_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/range.js */ "./source/scripts/modules/range.js");
+/* harmony import */ var _modules_stickyFooter_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/stickyFooter.js */ "./source/scripts/modules/stickyFooter.js");
+/* harmony import */ var _modules_stickyFooter_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyFooter_js__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -14853,32 +14855,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let footer = document.querySelector('.modal__footer');
-let upBtn = document.querySelector('.up-btn');
-let modal = document.querySelector('.modal__container');
-
-upBtn.addEventListener('click', function() {
-    console.log('scroll')
-    modal.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-})
-
-let header = document.querySelector('.modal__header');
-
-let observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-        if(entry.isIntersecting) {
-            footer.classList.contains('is-active') ?
-            footer.classList.remove('is-active') : null
-        } else {
-            footer.classList.add('is-active');
-        }
-    });
-});
-
-observer.observe(header);
 
 
 /***/ }),
@@ -14919,8 +14895,9 @@ if(btn) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-let togglers = document.querySelectorAll('.tab__controls-toggler');
-let views = document.querySelectorAll('.modal__body');
+const togglers = document.querySelectorAll('.tab__controls-toggler');
+const views = document.querySelectorAll('.modal__body');
+const modalContainer = document.querySelector('.modal__container');
 
 const onClickChangeModalView = (evt) => {
     togglers.forEach(toggler => {
@@ -14933,6 +14910,11 @@ const onClickChangeModalView = (evt) => {
 
     activeTogglers.forEach(toggler => {
         toggler.classList.add('is-active');
+
+        modalContainer.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        }) 
     })
 
     views.forEach(view => {
@@ -14944,6 +14926,10 @@ const onClickChangeModalView = (evt) => {
         }
     })
 
+    setTimeout(() => {
+        console.log('scroll')
+         
+    }, 1000);
 }
 
 if(togglers) {
@@ -15244,6 +15230,42 @@ if (rangeSlider) {
 			setRangeSlider(index, evt.currentTarget.value);
 		});
 	});
+}
+
+/***/ }),
+
+/***/ "./source/scripts/modules/stickyFooter.js":
+/*!************************************************!*\
+  !*** ./source/scripts/modules/stickyFooter.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+let header = document.querySelector('.modal__header');
+let footer = document.querySelector('.modal__footer');
+let upBtn = document.querySelector('.up-btn');
+let modal = document.querySelector('.modal__container');
+
+if(upBtn) {
+    upBtn.addEventListener('click', function() {
+        modal.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    })
+
+    let observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if(entry.isIntersecting) {
+                footer.classList.contains('is-active') ?
+                footer.classList.remove('is-active') : null
+            } else {
+                footer.classList.add('is-active');
+            }
+        });
+    });
+
+    observer.observe(header);
 }
 
 /***/ }),

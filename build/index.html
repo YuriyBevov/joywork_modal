@@ -306,9 +306,9 @@
         <div class="modal__body" data-view="map">
           <div class="map-view-container">
             <div class="map"><img src="./assets/img/map-mock.png" alt=""></div>
-            <div class="object-short">
-              <ul class="object-short__list">
-                <li class="object-short-card">
+            <div class="object">
+              <ul class="object__list">
+                <li class="object-card">
                   <div class="swiper js-object-swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide"><a href="./assets/img/slide_1.jpg" target="_blank"><img src="./assets/img/slide_1.jpg" alt="Фото объекта" width="292" height="340"></a></div>
@@ -317,60 +317,45 @@
                     <div class="swiper-button-prev custom-slider-button-prev"></div>
                     <div class="swiper-button-next custom-slider-button-next"></div>
                   </div>
-                  <div class="object-short-card__content">
-                    <div class="object-short-card__section row">
-                      <div class="object-short-card__price col-6"><span class="nowrap">108 000 000 р.</span>
+                  <div class="object__content">
+                    <div class="object-card__section object-card__header"><span class="object-card__text">15 января 2022 18:34</span><span class="object-card__text">Продается  </span><span class="object-card__text">ID 7540598</span><a class="object-card__btn" href="#" aria-label="выпадающее меню">                     
+                        <svg width="20" height="20">
+                          <use xlink:href="#icon-dropdown"></use>
+                        </svg></a></div>
+                    <div class="object-card__section object-card__title"><a class="object-card__link" href="#">Комната Санкт-Петербург Литейный просп., 59 (56.0 м)</a><a class="object-card__btn" href="#" aria-label="Подробно">
+                        <svg width="28" height="28">
+                          <use xlink:href="#icon-eye"></use>
+                        </svg></a></div>
+                    <div class="object-card__section object-card__chars">
+                      <div class="object-card__chars-left"><span class="object-card__text">Район: <span>Центральный район</span></span><span class="object-card__text object-card__text--black">Адрес: <span>Санкт-Петербург, Литейный просп., 59</span></span><span class="object-card__text">Район: <span>Центральный район</span></span><span class="object-card__text object-card__text--black">Адрес: <span>Санкт-Петербург, Литейный просп., 59</span></span><span class="object-card__text">Район: <span>Центральный район</span></span><span class="object-card__text object-card__text--black">Адрес: <span>Санкт-Петербург, Литейный просп., 59</span></span><span class="object-card__text">Ссылка на источник:<a href="#">Циан</a></span></div>
+                      <div class="object-card__chars-right"><span class="object-card__text"> Общая пл. <span>10</span> кв.м.</span><span class="object-card__text object-card__text--black">Жилая пл.: <span>26</span> кв. м</span><span class="object-card__text">Этаж: <span>1</span> этаж из <span>19</span></span></div>
+                    </div>
+                    <div class="object-card__section object-card__action"><a class="object-card__action-link object-card__action-link--red" href="#" aria-label="Скачать pdf">
+                        <svg width="44" height="13">
+                          <use xlink:href="#icon-pdf_2"></use>
+                        </svg></a><a class="object-card__action-link object-card__action-link--blue" href="#" aria-label="Перейти во вконтакте">
+                        <svg width="24" height="24">
+                          <use xlink:href="#icon-vk"></use>
+                        </svg></a><a class="object-card__action-link" href="#" aria-label="Скачать">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-download"></use>
+                        </svg></a><a class="object-card__action-link" href="#">Задачи</a><a class="object-card__action-link" href="#">Автопоиск</a><a class="object-card__action-link" href="#">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
+                        </svg></a></div>
+                    <div class="object-card__section object-card__footer">
+                      <div class="object-card__footer-price"><span class="nowrap">108 000 000 р.</span>
                         <svg width="14" height="14">
                           <use xlink:href="#icon-price-down"></use>
                         </svg>
                       </div>
-                      <div class="object-short-card__action col-6"><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--red" href="#" aria-label="Скачать pdf">
-                          <svg width="22" height="16">
-                            <use xlink:href="#icon-pdf_2"></use>
-                          </svg></a><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--blue" href="#" aria-label="Перейти во вконтакте">
-                          <svg width="20" height="16">
-                            <use xlink:href="#icon-vk"></use>
-                          </svg></a><a class="desktop-hidden object-short-card__action-link" href="#" aria-label="Скачать">
-                          <svg width="16" height="16">
-                            <use xlink:href="#icon-download"></use>
-                          </svg></a><a class="object-short-card__action-link desktop-hidden" href="#">Задачи</a><a class="object-short-card__action-link desktop-hidden" href="#">Автопоиск</a><a class="object-short-card__action-link desktop-hidden" href="#">
-                          <svg width="16" height="16">
-                            <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
-                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-add" aria-label="Добавить"></use>
-                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
-                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-time" aria-label="..."></use>
-                          </svg></a><a class="mobile-hidden object-short-card__action-link object-short-card__action-link--red" href="#">
-                          <svg width="20" height="8">
-                            <use xlink:href="#icon-pdf_2" aria-label="Скачать pdf"></use>
-                          </svg></a><a class="mobile-hidden object-short-card__action-link" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-eye" aria-label="Подробнее"></use>
-                          </svg></a></div>
-                    </div>
-                    <div class="object-short-card__section row"><span class="col-12 light">Продается</span></div>
-                    <div class="object-short-card__section row">
-                      <h3 class="col-12">4-к. квартира, 103,1 м, 2/4 эт. <span> 103 кв. м </span> <span>2 /4 </span></h3>
-                    </div>
-                    <div class="object-short-card__section row">
-                      <div class="object-short-card__metro col-12">
-                        <svg width="12" height="12">
-                          <use xlink:href="#icon-metro"></use>
-                        </svg><span>Лесная</span>
+                      <div class="object-card__footer-contacts">
+                        <div class="object-card__footer-contacts-wrapper"><a class="object-card__text object-card__text--light" href="#">На карте</a><a class="object-card__text object-card__text--light" href="#">Описание</a></div><span class="object-card__text object-card__text--light">Екатерина Владимировна Брауншвейг</span><a class="object-card__footer-contacts-phone" href="tel:89819201791">89819201791</a>
                       </div>
                     </div>
-                    <div class="object-short-card__section row"><span class="col-12 light">Санкт-Петербург, Колпинский р-н, Колпино, пр-т Ленина, 16/11</span></div>
-                    <div class="object-short-card__section row"><a class="col-12" href="tel:89819201791">89819201791</a></div>
-                    <div class="object-short-card__section row"><a class="col-6 light underline" href="#">Собственник</a><a class="col-6 light underline" href="#">Авито</a></div>
-                    <div class="object-short-card__section row"><span class="col-12 light">15 января 2022 18:34</span></div>
                   </div>
                 </li>
-                <li class="object-short-card">
+                <li class="object-card">
                   <div class="swiper js-object-swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide"><a href="./assets/img/slide_1.jpg" target="_blank"><img src="./assets/img/slide_1.jpg" alt="Фото объекта" width="292" height="340"></a></div>
@@ -379,61 +364,134 @@
                     <div class="swiper-button-prev custom-slider-button-prev"></div>
                     <div class="swiper-button-next custom-slider-button-next"></div>
                   </div>
-                  <div class="object-short-card__content">
-                    <div class="object-short-card__section row">
-                      <div class="object-short-card__price col-6"><span class="nowrap">108 000 000 р.</span>
+                  <div class="object__content">
+                    <div class="object-card__section object-card__header"><span class="object-card__text">15 января 2022 18:34</span><span class="object-card__text">Продается  </span><span class="object-card__text">ID 7540598</span><a class="object-card__btn" href="#" aria-label="выпадающее меню">                     
+                        <svg width="20" height="20">
+                          <use xlink:href="#icon-dropdown"></use>
+                        </svg></a></div>
+                    <div class="object-card__section object-card__title"><a class="object-card__link" href="#">Комната Санкт-Петербург Литейный просп., 59 (56.0 м)</a><a class="object-card__btn" href="#" aria-label="Подробно">
+                        <svg width="28" height="28">
+                          <use xlink:href="#icon-eye"></use>
+                        </svg></a></div>
+                    <div class="object-card__section object-card__chars">
+                      <div class="object-card__chars-left"><span class="object-card__text">Район: <span>Центральный район</span></span><span class="object-card__text object-card__text--black">Адрес: <span>Санкт-Петербург, Литейный просп., 59</span></span><span class="object-card__text">Район: <span>Центральный район</span></span><span class="object-card__text object-card__text--black">Адрес: <span>Санкт-Петербург, Литейный просп., 59</span></span><span class="object-card__text">Район: <span>Центральный район</span></span><span class="object-card__text object-card__text--black">Адрес: <span>Санкт-Петербург, Литейный просп., 59</span></span><span class="object-card__text">Ссылка на источник:<a href="#">Циан</a></span></div>
+                      <div class="object-card__chars-right"><span class="object-card__text"> Общая пл. <span>10</span> кв.м.</span><span class="object-card__text object-card__text--black">Жилая пл.: <span>26</span> кв. м</span><span class="object-card__text">Этаж: <span>1</span> этаж из <span>19</span></span></div>
+                    </div>
+                    <div class="object-card__section object-card__action"><a class="object-card__action-link mobile-hidden" href="#">
+                        <svg width="14" height="14">
+                          <use xlink:href="#icon-add" aria-label="Добавить"></use>
+                        </svg></a><a class="object-card__action-link object-card__action-link--note" href="#">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
+                        </svg></a><a class="object-card__action-link mobile-hidden" href="#">
+                        <svg width="14" height="14">
+                          <use xlink:href="#icon-time" aria-label="..."></use>
+                        </svg></a><a class="object-card__action-link object-card__action-link--red" href="#" aria-label="Скачать pdf">
+                        <svg width="44" height="13">
+                          <use xlink:href="#icon-pdf_2"></use>
+                        </svg></a><a class="object-card__action-link mobile-hidden" href="#">
+                        <svg width="14" height="14">
+                          <use xlink:href="#icon-eye" aria-label="Подробнее"></use>
+                        </svg></a><a class="object-card__action-link object-card__action-link--blue desktop-hidden" href="#" aria-label="Перейти во вконтакте">
+                        <svg width="24" height="24">
+                          <use xlink:href="#icon-vk"></use>
+                        </svg></a><a class="object-card__action-link desktop-hidden" href="#" aria-label="Скачать">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-download"></use>
+                        </svg></a><a class="object-card__action-link desktop-hidden" href="#">Задачи</a><a class="object-card__action-link desktop-hidden" href="#">Автопоиск</a></div>
+                    <div class="object-card__section object-card__footer">
+                      <div class="object-card__footer-price"><span class="nowrap">108 000 000 р.</span>
                         <svg width="14" height="14">
                           <use xlink:href="#icon-price-down"></use>
                         </svg>
                       </div>
-                      <div class="object-short-card__action col-6"><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--red" href="#" aria-label="Скачать pdf">
-                          <svg width="22" height="16">
-                            <use xlink:href="#icon-pdf_2"></use>
-                          </svg></a><a class="desktop-hidden object-short-card__action-link object-short-card__action-link--blue" href="#" aria-label="Перейти во вконтакте">
-                          <svg width="20" height="16">
-                            <use xlink:href="#icon-vk"></use>
-                          </svg></a><a class="desktop-hidden object-short-card__action-link" href="#" aria-label="Скачать">
-                          <svg width="16" height="16">
-                            <use xlink:href="#icon-download"></use>
-                          </svg></a><a class="object-short-card__action-link desktop-hidden" href="#">Задачи</a><a class="object-short-card__action-link desktop-hidden" href="#">Автопоиск</a><a class="object-short-card__action-link desktop-hidden" href="#">
-                          <svg width="16" height="16">
-                            <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
-                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-add" aria-label="Добавить"></use>
-                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-note" aria-label="Добавить заметку"></use>
-                          </svg></a><a class="object-short-card__action-link mobile-hidden" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-time" aria-label="..."></use>
-                          </svg></a><a class="mobile-hidden object-short-card__action-link object-short-card__action-link--red" href="#">
-                          <svg width="20" height="8">
-                            <use xlink:href="#icon-pdf_2" aria-label="Скачать pdf"></use>
-                          </svg></a><a class="mobile-hidden object-short-card__action-link" href="#">
-                          <svg width="14" height="14">
-                            <use xlink:href="#icon-eye" aria-label="Подробнее"></use>
-                          </svg></a></div>
-                    </div>
-                    <div class="object-short-card__section row"><span class="col-12 light">Продается</span></div>
-                    <div class="object-short-card__section row">
-                      <h3 class="col-12">4-к. квартира, 103,1 м, 2/4 эт. <span> 103 кв. м </span> <span>2 /4 </span></h3>
-                    </div>
-                    <div class="object-short-card__section row">
-                      <div class="col-12">
-                        <svg width="12" height="12">
-                          <use xlink:href="#icon-metro"></use>
-                        </svg><span>Лесная</span>
+                      <div class="object-card__footer-contacts">
+                        <div class="object-card__footer-contacts-wrapper"><a class="object-card__text object-card__text--light" href="#">На карте</a><a class="object-card__text object-card__text--light" href="#">Описание</a></div><span class="object-card__text object-card__text--light">Екатерина Владимировна Брауншвейг</span><a class="object-card__footer-contacts-phone" href="tel:89819201791">89819201791</a>
                       </div>
                     </div>
-                    <div class="object-short-card__section row"><span class="col-12 light">Санкт-Петербург, Колпинский р-н, Колпино, пр-т Ленина, 16/11</span></div>
-                    <div class="object-short-card__section row"><a class="col-12" href="tel:89819201791">89819201791</a></div>
-                    <div class="object-short-card__section row"><a class="col-6 light underline" href="#">Собственник</a><a class="col-6 light underline" href="#">Авито</a></div>
-                    <div class="object-short-card__section row"><span class="col-12 light">15 января 2022 18:34      </span></div>
                   </div>
                 </li>
               </ul>
             </div>
+            <!--.object-short
+            ul.object-short__list
+              li.object-short-card
+                .swiper.js-object-swiper
+                  .swiper-wrapper
+                    .swiper-slide
+                      a(href="./assets/img/slide_1.jpg" target="_blank")
+                        img(src="./assets/img/slide_1.jpg" alt="Фото объекта" width="292" height="340")
+                    .swiper-slide
+                      a(href="./assets/img/slide_1.jpg" target="_blank")
+                        img(src="./assets/img/slide_1.jpg" alt="Фото объекта" width="292" height="340") 
+                  
+                  .swiper-button-prev.custom-slider-button-prev
+                  .swiper-button-next.custom-slider-button-next
+            
+                .object-short-card__content
+                  .object-short-card__section.row
+                    .object-short-card__price.col-6
+                      span.nowrap 108 000 000 р.
+                      svg(width="14" height="14")
+                        use(xlink:href="#icon-price-down")
+            
+                    .object-short-card__action.col-6
+                      a(href="#" aria-label="Скачать pdf").desktop-hidden.object-short-card__action-link.object-short-card__action-link--red
+                        svg(width="22" height="16")
+                          use(xlink:href="#icon-pdf_2")
+                      a(href="#" aria-label="Перейти во вконтакте").desktop-hidden.object-short-card__action-link.object-short-card__action-link--blue
+                        svg(width="20" height="16")
+                          use(xlink:href="#icon-vk")
+                      a(href="#" aria-label="Скачать").desktop-hidden.object-short-card__action-link
+                        svg(width="16" height="16")
+                          use(xlink:href="#icon-download")
+                      a(href="#").object-short-card__action-link.desktop-hidden Задачи
+                      a(href="#").object-short-card__action-link.desktop-hidden Автопоиск
+                      a(href="#").object-short-card__action-link.desktop-hidden
+                        svg(width="16" height="16")
+                          use(xlink:href="#icon-note" aria-label="Добавить заметку")
+            
+                      a(href="#").object-short-card__action-link.mobile-hidden
+                        svg(width="14" height="14")
+                          use(xlink:href="#icon-add" aria-label="Добавить")
+                      a(href="#").object-short-card__action-link.mobile-hidden
+                        svg(width="14" height="14")
+                          use(xlink:href="#icon-note" aria-label="Добавить заметку")
+                      a(href="#").object-short-card__action-link.mobile-hidden
+                        svg(width="14" height="14")
+                          use(xlink:href="#icon-time" aria-label="...")
+                      a(href="#").mobile-hidden.object-short-card__action-link.object-short-card__action-link--red
+                        svg(width="20" height="8")
+                          use(xlink:href="#icon-pdf_2" aria-label="Скачать pdf")
+                      a(href="#").mobile-hidden.object-short-card__action-link
+                        svg(width="14" height="14")
+                          use(xlink:href="#icon-eye" aria-label="Подробнее")
+                  
+                  .object-short-card__section.row
+                    span.col-12.light Продается
+            
+                  .object-short-card__section.row
+                    h3.col-12 4-к. квартира, 103,1 м, 2/4 эт. <span> 103 кв. м </span> <span>2 /4 </span>
+                  
+                  .object-short-card__section.row
+                    .object-short-card__metro.col-12
+                      svg(width="12" height="12")
+                        use(xlink:href="#icon-metro")
+                      span Лесная
+                  .object-short-card__section.row
+                    span.col-12.light Санкт-Петербург, Колпинский р-н, Колпино, пр-т Ленина, 16/11
+            
+                  .object-short-card__section.row
+                    a(href="tel:89819201791").col-12 89819201791
+            
+                  .object-short-card__section.row
+                    a(href="#").col-6.light.underline Собственник
+                    a(href="#").col-6.light.underline Авито
+                  .object-short-card__section.row
+                    span.col-12.light 15 января 2022 18:34
+              
+            
+            -->
           </div>
         </div>
         <div class="inner-modal average-modal">

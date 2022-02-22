@@ -1,5 +1,6 @@
-let togglers = document.querySelectorAll('.tab__controls-toggler');
-let views = document.querySelectorAll('.modal__body');
+const togglers = document.querySelectorAll('.tab__controls-toggler');
+const views = document.querySelectorAll('.modal__body');
+const modalContainer = document.querySelector('.modal__container');
 
 const onClickChangeModalView = (evt) => {
     togglers.forEach(toggler => {
@@ -12,6 +13,11 @@ const onClickChangeModalView = (evt) => {
 
     activeTogglers.forEach(toggler => {
         toggler.classList.add('is-active');
+
+        modalContainer.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        }) 
     })
 
     views.forEach(view => {
@@ -23,6 +29,10 @@ const onClickChangeModalView = (evt) => {
         }
     })
 
+    setTimeout(() => {
+        console.log('scroll')
+         
+    }, 1000);
 }
 
 if(togglers) {

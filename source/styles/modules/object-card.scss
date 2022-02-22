@@ -83,6 +83,7 @@
             font-size: 18px;
             line-height: 20px;
         }
+
     }
 
     &__chars {
@@ -157,6 +158,28 @@
                 background: linear-gradient(180deg, #718CAC 0%, #506F94 100%);
                 border: 1px solid #507299;
                 border-radius: 3px;
+            }
+
+            @media(max-width: 960px) {
+                &--note {
+                    order: 10;
+                }
+            }
+
+            
+            @media(min-width: 960px) {
+                margin: 3px;
+                margin-left: 0;
+
+                &.desktop-hidden {
+                    display: none;
+                }
+            }  
+
+            @media(max-width: 960px) {
+                &.mobile-hidden {
+                    display: none;
+                }
             }
         }
         
@@ -283,7 +306,6 @@
     }
 
     @media(max-width: 500px) {
-
         &__link {
             font-size: 16px;
             line-height: 18px;
