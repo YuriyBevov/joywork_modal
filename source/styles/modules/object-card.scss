@@ -269,7 +269,8 @@
             align-items: flex-start;
 
             &-price {
-                align-self: center;
+                // align-self: center;
+                width: 100%;
                 border-right: 0;
                 border-bottom: $light-border;
             }
@@ -293,6 +294,20 @@
         &__footer-contacts {
             width: 100%;
             flex-direction: column;
+        }
+
+        &__footer-contacts {
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            span {
+                padding-left: 0;
+                margin-bottom: 5px;
+            }
+
+            a {
+                margin-bottom: 5px;
+            }
         }
         
         &__title {
@@ -330,18 +345,12 @@
                 order: 2;
 
                 a {
-                    margin: 0 10px;
+                    margin-right: 10px;
                 }
-            }
-
-            span,
-            a {
-                margin-bottom: 10px;
             }
 
             span {
                 max-width: 100%;
-                text-align: center;
             }
 
             a {
