@@ -34,6 +34,10 @@
             display: none;
         }
 
+        .swiper-button-disabled {
+            opacity: 0.2;
+        }
+
         .custom-slider-button-prev,
         .custom-slider-button-next {
             border: 2px solid white;

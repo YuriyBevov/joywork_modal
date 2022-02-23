@@ -121,10 +121,18 @@ input[type=number] {
 }
 
 .btn-underline {
+  width: fit-content;
   font-size: 15px;
   line-height: 18px;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px dashed $grey;
   margin-right: 10px;
 
   color: #858585;
+  transition: all $main-transition;
+
+  &:hover,
+  &:focus {
+    color: #507299;
+    border-bottom: 1px dashed #507299;
+  }
 }
