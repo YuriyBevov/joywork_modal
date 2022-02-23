@@ -126,7 +126,7 @@
     }
 
     &__action {
-        padding-bottom: 0;
+        //padding-bottom: 0;
         flex-wrap: wrap;
 
         &-link {
@@ -246,7 +246,6 @@
     }
 
     @media(max-width: 960px) {
-        
         &__action,
         &__footer,
         &__chars {
@@ -292,7 +291,6 @@
             align-items: flex-start;
 
             &-price {
-                // align-self: center;
                 width: 100%;
                 border-right: 0;
                 border-bottom: $light-border;

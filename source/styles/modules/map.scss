@@ -47,31 +47,6 @@
                 overflow: hidden;
                 overflow-y: auto;
 
-                &-card {
-                    padding: 10px;
-                    margin-bottom: 0;
-
-                    &__btn {
-                        display: none;
-                    }
-
-                    &__action {
-                        padding-bottom: 10px;
-                    }
-
-                    &__section {
-                        //padding: 10px;
-                    }
-
-                    &__chars-left {
-                        border-right: 0;
-                    }
-
-                    &__footer {
-                        padding: 0;
-                    }
-                }
-
                 .swiper {
                     width: 100%;
                     height: 220px;
@@ -86,9 +61,7 @@
                 &__header,
                 &__title {
                     order: 1;
-                }
-
-                
+                }               
             
                 &__chars {
                     height: 199px;
@@ -101,111 +74,115 @@
                     }
                 }
             
-                &__action {
+                /*&__action {
                     padding: 15px;
                     padding-bottom: 5px;
-                }
+                } */
             
                 &-card {
                     flex-direction: column;
-            
-                &__chars {
-                    height: 100%;
-                    padding-left: 0;
-                }
-            
-                &__footer {
-                    flex-direction: column;
-                    align-items: flex-start;
-        
-                    &-price {
-                        width: 100%;
-                        border-right: 0;
-                        border-bottom: $light-border;
-                    }
-                }
-        
-                &__text {
-                    font-size: 14px;
-                    line-height: 16px;
-                }
-            
-                &__link {
-                    font-size: 16px;
-                    line-height: 18px;
-                }
-        
-                &__chars,
-                &__footer-contacts {
-                    width: 100%;
-                    flex-direction: column;
-                }
-            
-                &__footer-contacts {
-                    align-items: flex-start;
-                    justify-content: flex-start;
-        
-                    span {
-                        padding-left: 0;
-                        margin-bottom: 5px;
-                    }
-        
-                    a {
-                        margin-bottom: 5px;
-                    }
-                }
-                    
-                &__title {
-                    position: relative;
-        
-                    .object-card__btn {
-                        position: absolute;
-                        top: 10px;
-                        right: 10px;
-                    }
-                }
-            
-                &__header {
-                    position: relative;
-                    align-items: flex-start;
-                    //padding-right: 50px;
-        
-                    span {
-                        margin-bottom: 5px;
+                    padding: 0 10px;
+                    margin-bottom: 0;
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
                     }
 
-                    span:last-of-type {
-                        display: none;
+                    &__action {
+                        padding-bottom: 10px;
                     }
-        
-                    .object-card__btn {
-                        position: absolute;
-                        top: 10px;
-                        right: 10px;
-                    }
-                }
             
-                &__footer {
-                    &-contacts-wrapper {
-                        flex-direction: row;
-                        order: 2;
-        
-                        a {
-                            margin-right: 10px;
-                        }
+                    &__text {
+                        font-size: 14px;
+                        line-height: 16px;
                     }
-        
-                    span {
-                        max-width: 100%;
-                    }
-        
-                    a {
+                
+                    &__link {
                         font-size: 16px;
                         line-height: 18px;
                     }
-                }
             
+                    &__chars,
+                    &__footer-contacts {
+                        width: 100%;
+                        flex-direction: column;
+                    }
+                
+                    &__footer-contacts {
+                        align-items: flex-start;
+                        justify-content: flex-start;
+            
+                        span {
+                            padding-left: 0;
+                            margin-bottom: 5px;
+                        }
+            
+                        a {
+                            margin-bottom: 5px;
+                        }
+                    }
+                        
+                    &__title {
+                        position: relative;
+                        padding-right: 60px;
+            
+                        .object-card__btn {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                        }
+                    }
+                
+                    &__header {
+                        position: relative;
+                        align-items: flex-start;
+                        padding-right: 60px;
+                        flex-direction: column;
+            
+                        span {
+                            margin-bottom: 5px;
+                        }
+            
+                        .object-card__btn {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                        }
+                    }
+                
+                    &__footer {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0;
+            
+                        span {
+                            max-width: 100%;
+                        }
+            
+                        a {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
+            
+                        &-price {
+                            width: 100%;
+                            border-right: 0;
+                            border-bottom: $light-border;
+                        }
+
+                        &-contacts-wrapper {
+                            flex-direction: row;
+                            order: 2;
+            
+                            a {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+
                     &__chars {
+                        height: 100%;
+                        padding-left: 0;
                         &-left,
                         &-right {
                             width: 100%;
@@ -213,6 +190,7 @@
             
                         &-left {
                             order: 2;
+                            border-right: 0;
                         }
                     }
                 }
