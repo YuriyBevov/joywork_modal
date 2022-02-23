@@ -15,7 +15,11 @@ const onClickOpenInnerModal = (evt) => {
         console.log(modalName)
         modal.style.top = parentContainer.scrollTop + 'px';
 
-        modal.style.paddingTop = parentContainer.scrollTop + 'px';
+        if(modalName !== 'objects-modal') {
+            console.log('OBJECTS_MODAL')
+        } else {
+            modal.style.paddingTop = parentContainer.scrollTop + 'px';
+        }
         
         closeInnerModal(modal, parentContainer);
     };

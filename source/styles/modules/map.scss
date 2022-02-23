@@ -183,6 +183,10 @@
                                 top: calc(100% - -10px);
                                 width: 333px;
 
+                                button {
+                                    margin-right: 0;
+                                }
+
                                 @media(max-width: 1240px) {
                                     left: -11px;
                                 }

@@ -131,7 +131,8 @@ input[type=number] {
   transition: all $main-transition;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: #507299;
     border-bottom: 1px dashed #507299;
   }
