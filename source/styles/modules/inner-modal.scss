@@ -53,9 +53,9 @@
             height: 400px;
         }
     }
-
-    & > .map-modal__container,
-    & > .description-modal__container {
+    
+    //& > .description-modal__container,
+    & > .map-modal__container {
         width: 100%;
         max-width: 600px;
         height: initial;

@@ -33,8 +33,6 @@ const onClickOpenInnerModal = (evt) => {
             let closeBtn = description.querySelector('.drop-close');
 
             const onResizeCloseDrop = () => {
-                console.log('resize')
-
                 if( window.innerWidth < 961 ) {
                     description.classList.remove('is-active');
                     window.removeEventListener('resize', onResizeCloseDrop);
