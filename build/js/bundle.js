@@ -14988,6 +14988,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const modal = document.querySelector('.modal');
+const modalContainer = modal.querySelector('.modal__container');
 const closeBtns = document.querySelectorAll('.modal__close');
 
 const ESC_BTN_CODE = 27;
@@ -14996,7 +14997,9 @@ if(modal) {
     const onClickByOverlayCloseModal = (evt) => {
         if(evt.target === modal) {
             modal.classList.remove('is-opened');
-            
+
+            modalContainer.style.overflowY === 'hidden' ?
+            modalContainer.style.overflowY = 'auto' : null;
             Object(_refreshModalState_js__WEBPACK_IMPORTED_MODULE_0__["refreshModalState"])(true);
         }
     }
@@ -15012,8 +15015,11 @@ if(modal) {
 
             if(innerModal) {
                 innerModal.classList.remove('is-opened');
+                modalContainer.style.overflowY === 'hidden' ?
+                modalContainer.style.overflowY = 'auto' : null;
             } else {
                 modal.classList.remove('is-opened');
+
                 Object(_refreshModalState_js__WEBPACK_IMPORTED_MODULE_0__["refreshModalState"])(true);
             }
         }
@@ -15055,11 +15061,13 @@ const onClickOpenInnerModal = (evt) => {
         console.log(modalName)
         modal.style.top = parentContainer.scrollTop + 'px';
 
-        if(modalName !== 'objects-modal') {
+        /* if(modalName !== 'objects-modal') {
             console.log('OBJECTS_MODAL')
         } else {
-            modal.style.paddingTop = parentContainer.scrollTop + 'px';
-        }
+            
+        } */
+
+        modal.style.paddingTop = parentContainer.scrollTop + 'px';
         
         Object(_closeInnerModal_js__WEBPACK_IMPORTED_MODULE_0__["closeInnerModal"])(modal, parentContainer);
     };
