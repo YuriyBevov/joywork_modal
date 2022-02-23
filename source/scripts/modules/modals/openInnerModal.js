@@ -34,6 +34,10 @@ const onClickOpenInnerModal = (evt) => {
             description.classList.add('is-active');
             let closeBtn = description.querySelector('.drop-close');
 
+            description.scrollIntoView({
+                block: 'center', inline: "nearest", behavior: 'smooth'
+            });
+
             const onResizeCloseDrop = () => {
                 if( window.innerWidth < 961 ) {
                     description.classList.remove('is-active');
