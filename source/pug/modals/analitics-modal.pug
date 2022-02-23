@@ -65,7 +65,7 @@
           svg(width="18" height="18")
             use(xlink:href="#icon-close")
       
-      .modal__tabs
+      .modal__tabs.tab
         ul.tab__list 
           each tab in tablist
             li
@@ -467,7 +467,7 @@
             button(type="button").inner-modal__close.btn-default
               svg(width="18" height="18")
                 use(xlink:href="#icon-close")
-          .map-modal__content
+          .inner-modal__content.map-modal__content
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A49656faf25fa86ee13c9bc1beca6438c12cf4dc972d4a9a480fd377d19269059&amp;source=constructor" width="1280" height="700" frameborder="0"></iframe>
       
       .inner-modal.description-modal
@@ -478,7 +478,7 @@
               svg(width="18" height="18")
                 use(xlink:href="#icon-close")
           
-          .map-modal__content
+          .inner-modal__content.description-modal__content
             p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum distinctio explicabo delectus repellendus tenetur rerum eum beatae ullam eaque? Quisquam voluptates ducimus ex temporibus natus harum nesciunt facere dolorem sapiente? 
             <br/>
             p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto minima, fugiat, deleniti exercitationem temporibus est dolor quisquam incidunt illo quaerat reprehenderit obcaecati distinctio quas numquam? Dolorum, laborum neque. Ab, vel?
@@ -534,7 +534,7 @@
                     span.average-table__text.average-table__text--green 5 000 000 – 8 000 000 р
                   <a href="#">Объекты в сравнении</a>
 
-            .average__recomendation
+            .average__recomendation.average-table
               span.average-table__title Рекомендованная цена продажи
               ul
                 li
@@ -549,14 +549,14 @@
                   span.average-table__text Сделка завтра:
                   span.average-table__text.average-table__text--bold 1 300 000 000 р
                     
-            a(href="#").btn-default.average-table__report-btn
+            a(href="#").btn-default.average__report-btn
               svg(width="18" height="18")
                 use(xlink:href="#icon-pdf")
               
               span Сформировать отчет для клиента
 
     .modal__footer
-      .modal__footer-togglers
+      .modal__footer-togglers.tab
         button(type="button" data-view-type="list").tab__controls-toggler.btn-default.is-active Списком
         button(type="button" data-view-type="map").tab__controls-toggler.btn-default На карте
 

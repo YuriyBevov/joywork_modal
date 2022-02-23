@@ -58,4 +58,31 @@
             }
         }
     }
+
+    &__report-btn {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 5px 0;
+
+        color: $black-300;
+
+        & > span {
+            padding-bottom: 2px;
+            display: inline-block;
+            border-bottom: 1px solid $black-300;
+        }
+
+        svg {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            background: linear-gradient(180deg, #E7766D 0%, #E3594E 100%);
+            border: 1px solid #C34B3F;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+    }
 }
