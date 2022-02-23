@@ -28,11 +28,6 @@ const onClickChangeModalView = (evt) => {
             view.classList.add('is-active');
         }
     })
-
-    setTimeout(() => {
-        console.log('scroll')
-         
-    }, 1000);
 }
 
 if(togglers) {

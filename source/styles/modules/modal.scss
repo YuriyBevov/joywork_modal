@@ -55,7 +55,7 @@
     &__header {
         @media(min-width: 960px) {
             position: sticky;
-            top: 0;
+            top: -1px;
             background-color: $white;
             z-index: 101;
         }

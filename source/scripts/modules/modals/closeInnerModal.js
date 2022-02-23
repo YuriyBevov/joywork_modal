@@ -1,6 +1,5 @@
 function closeInnerModal(modal, parentContainer) {
     const closeBtn = modal.querySelector('.inner-modal__close');
-    console.log('closeinner', parentContainer);
 
     const onClickByOverlayCloseModal = (evt) => {
         if(evt.target === modal) {
