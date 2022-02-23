@@ -248,7 +248,10 @@
                       </svg>
                     </div>
                     <div class="object-card__footer-contacts">
-                      <div class="object-card__footer-contacts-wrapper"><a class="object-card__text object-card__text--light" href="#">На карте</a><a class="object-card__text object-card__text--light" href="#">Описание</a></div><span class="object-card__text object-card__text--light">Екатерина Владимировна Брауншвейг</span><a class="object-card__footer-contacts-phone" href="tel:89819201791">89819201791</a>
+                      <div class="object-card__footer-contacts-wrapper">
+                        <button class="btn-underline btn-default inner-modal-opener" type="button" data-modal-name="map-modal">На карте</button>
+                        <button class="btn-underline btn-default inner-modal-opener" type="button" data-modal-name="description-modal">Описание</button>
+                      </div><span class="object-card__text object-card__text--light">Екатерина Владимировна Брауншвейг</span><a class="object-card__footer-contacts-phone" href="tel:89819201791">89819201791</a>
                     </div>
                   </div>
                 </div>
@@ -295,7 +298,12 @@
                       </svg>
                     </div>
                     <div class="object-card__footer-contacts">
-                      <div class="object-card__footer-contacts-wrapper"><a class="object-card__text object-card__text--light" href="#">На карте</a><a class="object-card__text object-card__text--light" href="#">Описание</a></div><span class="object-card__text object-card__text--light">Екатерина Владимировна Брауншвейг</span><a class="object-card__footer-contacts-phone" href="tel:89819201791">89819201791</a>
+                      <div class="object-card__footer-contacts-wrapper">
+                        <button class="btn-underline btn-default inner-modal-opener" type="button" data-modal-name="map-modal">На карте</button>
+                        <button class="btn-underline btn-default inner-modal-opener" type="button" data-modal-name="description-modal">Описание</button>
+                        <!-- a(href="#").object-card__text.object-card__text--light На карте-->
+                        <!-- a(href="#").object-card__text.object-card__text--light Описание-->
+                      </div><span class="object-card__text object-card__text--light">Екатерина Владимировна Брауншвейг</span><a class="object-card__footer-contacts-phone" href="tel:89819201791">89819201791</a>
                     </div>
                   </div>
                 </div>
@@ -305,7 +313,7 @@
         </div>
         <div class="modal__body" data-view="map">
           <div class="map-view-container">
-            <div class="map"><img src="./assets/img/map-mock.png" alt=""></div>
+            <div class="map"><img src="./assets/img/map-mock.png" alt="Карта"></div>
             <div class="object">
               <ul class="object__list">
                 <li class="object-card">
@@ -501,6 +509,35 @@
               
             
             -->
+          </div>
+        </div>
+        <div class="inner-modal map-modal">
+          <div class="inner-modal__container map-modal__container">
+            <div class="inner-modal__header map-modal__header">
+              <h2 class="inner-modal__title">Объект на карте:</h2>
+              <button class="inner-modal__close btn-default" type="button">
+                <svg width="18" height="18">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="map-modal__content"><img src="./assets/img/map-mock.png" alt="Карта"></div>
+          </div>
+        </div>
+        <div class="inner-modal description-modal">
+          <div class="inner-modal__container description-modal__container">
+            <div class="inner-modal__header">
+              <h2 class="inner-modal__title">Описание объекта:</h2>
+              <button class="inner-modal__close btn-default" type="button">
+                <svg width="18" height="18">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="map-modal__content">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum distinctio explicabo delectus repellendus tenetur rerum eum beatae ullam eaque? Quisquam voluptates ducimus ex temporibus natus harum nesciunt facere dolorem sapiente? </p><br>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto minima, fugiat, deleniti exercitationem temporibus est dolor quisquam incidunt illo quaerat reprehenderit obcaecati distinctio quas numquam? Dolorum, laborum neque. Ab, vel?</p>
+            </div>
           </div>
         </div>
         <div class="inner-modal average-modal">

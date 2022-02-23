@@ -16,6 +16,8 @@
         display: block;
     }
 
+
+
     &__container {
         position: absolute;
         top: 0;
@@ -33,6 +35,29 @@
 
         @media(max-width: $tablet_small) {
             padding: 10px;
+        }
+    }
+
+    & .map-modal__header {
+        margin-bottom: 10px;
+    }
+
+    & > .map-modal__container {
+        width: 100%;
+        max-width: 600px;
+        height: initial;
+        min-height: initial;
+        padding: 10px;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -150%);
+        animation: showMapModal 0.7s forwards;
+
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
         }
     }
 
@@ -85,5 +110,15 @@
         100% {
             transform: translateX(0);
         }
-      }
+    }
+
+    @keyframes showMapModal {
+        0% {
+            transform: translate(-50%, -150%);
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
 }

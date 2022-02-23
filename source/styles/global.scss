@@ -119,3 +119,12 @@ input[type=number] {
     fill: #507299;
   }
 }
+
+.btn-underline {
+  font-size: 15px;
+  line-height: 18px;
+  border-bottom: 1px solid $grey;
+  margin-right: 10px;
+
+  color: #858585;
+}

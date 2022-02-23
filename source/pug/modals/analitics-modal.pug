@@ -200,8 +200,9 @@
                         use(xlink:href="#icon-price-down")
                   .object-card__footer-contacts
                     .object-card__footer-contacts-wrapper
-                      a(href="#").object-card__text.object-card__text--light На карте
-                      a(href="#").object-card__text.object-card__text--light Описание
+                      button(type="button" data-modal-name="map-modal").btn-underline.btn-default.inner-modal-opener На карте
+                      button(type="button" data-modal-name="description-modal").btn-underline.btn-default.inner-modal-opener Описание
+
                     span.object-card__text.object-card__text--light Екатерина Владимировна Брауншвейг
                     a(href="tel:89819201791").object-card__footer-contacts-phone 89819201791
             li.object-card
@@ -272,14 +273,17 @@
                         use(xlink:href="#icon-price-down")
                   .object-card__footer-contacts
                     .object-card__footer-contacts-wrapper
-                      a(href="#").object-card__text.object-card__text--light На карте
-                      a(href="#").object-card__text.object-card__text--light Описание
+                      button(type="button" data-modal-name="map-modal").btn-underline.btn-default.inner-modal-opener На карте
+                      button(type="button" data-modal-name="description-modal").btn-underline.btn-default.inner-modal-opener Описание
+                      
+                      // a(href="#").object-card__text.object-card__text--light На карте
+                      // a(href="#").object-card__text.object-card__text--light Описание
                     span.object-card__text.object-card__text--light Екатерина Владимировна Брауншвейг
                     a(href="tel:89819201791").object-card__footer-contacts-phone 89819201791
       div(data-view="map").modal__body
         .map-view-container
           .map
-            img(src="./assets/img/map-mock.png" alt="")
+            img(src="./assets/img/map-mock.png" alt="Карта")
           
           .object
             ul.object__list
@@ -538,7 +542,29 @@
                   .object-short-card__section.row
                     span.col-12.light 15 января 2022 18:34
               
-
+      
+      .inner-modal.map-modal
+        .inner-modal__container.map-modal__container
+          .inner-modal__header.map-modal__header
+            h2.inner-modal__title Объект на карте:
+            button(type="button").inner-modal__close.btn-default
+              svg(width="18" height="18")
+                use(xlink:href="#icon-close")
+          .map-modal__content
+            img(src="./assets/img/map-mock.png" alt="Карта")
+      
+      .inner-modal.description-modal
+        .inner-modal__container.description-modal__container
+          .inner-modal__header
+            h2.inner-modal__title Описание объекта:
+            button(type="button").inner-modal__close.btn-default
+              svg(width="18" height="18")
+                use(xlink:href="#icon-close")
+          
+          .map-modal__content
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum distinctio explicabo delectus repellendus tenetur rerum eum beatae ullam eaque? Quisquam voluptates ducimus ex temporibus natus harum nesciunt facere dolorem sapiente? 
+            <br/>
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto minima, fugiat, deleniti exercitationem temporibus est dolor quisquam incidunt illo quaerat reprehenderit obcaecati distinctio quas numquam? Dolorum, laborum neque. Ab, vel?
       .inner-modal.average-modal
         .inner-modal__container.average-modal__container
           .inner-modal__header

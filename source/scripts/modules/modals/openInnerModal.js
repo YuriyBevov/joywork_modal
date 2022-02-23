@@ -14,7 +14,7 @@ const onClickOpenInnerModal = (evt) => {
     console.log(modalName)
     modal.style.top = parentContainer.scrollTop + 'px';
     if(modalName !== 'objects-modal') {
-        
+        console.log(modalName);
     } else {
         console.log('objects')
 
